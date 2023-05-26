@@ -13,6 +13,7 @@ import com.ibm.integration.test.v1.exception.TestException;
 
 import static com.ibm.integration.test.v1.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Transformation_ESQL_Transformation_ESQL_Compute_0001_Test {
 
@@ -93,4 +94,46 @@ public class Transformation_ESQL_Transformation_ESQL_Compute_0001_Test {
 
 	}
 
+	@Test
+	public void Transformation_ESQL_Transformation_ESQL_Compute_TestCase_002() throws TestException {
+
+		// Define the SpyObjectReference
+		SpyObjectReference nodeReference = new SpyObjectReference().application("Transformation_ESQL")
+				.messageFlow("Transformation_ESQL").node("Compute");
+
+		// Initialise a NodeSpy
+		NodeSpy nodeSpy = new NodeSpy(nodeReference);
+
+		// Declare a new TestMessageAssembly object for the message being sent into the node
+		TestMessageAssembly inputMessageAssembly = new TestMessageAssembly();
+
+		// Create a Message Assembly from the input data file
+		try {
+			String messageAssemblyPath = "/emptyBody.mxml";
+			InputStream messageStream = Thread.currentThread().getContextClassLoader()
+					.getResourceAsStream(messageAssemblyPath);
+			if (messageStream == null) {
+				throw new TestException("Unable to locate message assembly file: " + messageAssemblyPath);
+			}
+			inputMessageAssembly.buildFromRecordedMessageAssembly(messageStream);
+		} catch (Exception ex) {
+			throw new TestException("Failed to load input message", ex);
+		}
+
+		// Call the message flow node with the Message Assembly
+		nodeSpy.evaluate(inputMessageAssembly, true, "in");
+
+		// Assert the number of times that the node is called
+		assertThat(nodeSpy, nodeCallCountIs(1));
+
+		// Assert the terminal propagate count for the message
+		assertThat(nodeSpy, terminalPropagateCountIs("out", 1));
+
+		// Compare Output Message 1 at output terminal out
+
+		TestMessageAssembly actualMessageAssembly = null;
+		// Get the TestMessageAssembly object for the actual propagated message
+		actualMessageAssembly = nodeSpy.propagatedMessageAssembly("out", 1);
+		assertEquals("400", actualMessageAssembly.localEnvironmentPath("Destination.HTTP.ReplyStatusCode").getStringValue());
+	}
 }
