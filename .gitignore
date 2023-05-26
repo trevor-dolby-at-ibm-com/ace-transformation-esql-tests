@@ -9,3 +9,6 @@
 
 # Undo-tree save-files
 *.~undo-tree
+
+junit-reports*
+Transformation_ESQL_Test/Transformation_ESQL_Test.jar
