@@ -9,6 +9,9 @@
 # Exit on any failure
 set -e
 
+# Print commands
+set -x
+
 # Create the work directory
 rm -rf /tmp/ace-transformation-esql-tests-work-dir junit-reports
 mqsicreateworkdir /tmp/ace-transformation-esql-tests-work-dir

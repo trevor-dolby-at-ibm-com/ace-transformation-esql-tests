@@ -10,6 +10,9 @@ REM Create the work directory
 rmdir /s /q %TEMP%\ace-transformation-esql-tests-work-dir
 call mqsicreateworkdir %TEMP%\ace-transformation-esql-tests-work-dir
 
+REM Print commands
+ECHO ON
+
 REM Build everything; we can do this in this case because we want to include the unit
 REM tests, but production builds should specify the projects.
 ibmint deploy --input-path . --output-work-directory %TEMP%\ace-transformation-esql-tests-work-dir
