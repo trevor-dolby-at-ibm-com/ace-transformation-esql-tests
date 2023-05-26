@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><MessageAssembly iib:parser="GENERICROOT" xmlns:iib="http://com.ibm.iib/lt/1.0">
+   <version xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</version>
+   <checkpoint>
+      <messageId xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">00008284-6470EB0F-00000001</messageId>
+      <propagationCount xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</propagationCount>
+      <nodeCallDepth xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">2</nodeCallDepth>
+      <timestamp xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="TIMESTAMP">2023-05-26 17:23:27.471001</timestamp>
+      <source>
+         <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Compute</name>
+         <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Transformation_ESQL#FCMComposite_1_3</identifier>
+         <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmComputeNode</type>
+         <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">out</terminal>
+         <nodePath>
+            <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Transformation_ESQL</application>
+            <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Transformation_ESQL</messageFlow>
+            <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Compute</node>
+         </nodePath>
+         <inputNode xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="BOOLEAN">FALSE</inputNode>
+      </source>
+      <target>
+         <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTP Reply</name>
+         <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Transformation_ESQL#FCMComposite_1_1</identifier>
+         <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmWSReplyNode</type>
+         <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">in</terminal>
+         <nodePath>
+            <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Transformation_ESQL</application>
+            <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Transformation_ESQL</messageFlow>
+            <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTP Reply</node>
+         </nodePath>
+      </target>
+   </checkpoint>
+   <environment/>
+   <localEnvironment xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+      <Destination>
+         <HTTP>
+            <RequestIdentifier iib:valueType="BLOB">4556485400000000000000006f341659e09e000000000000</RequestIdentifier>
+         </HTTP>
+      </Destination>
+   </localEnvironment>
+   <exceptionList/>
+   <message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="WSRoot">
+      <Properties iib:parser="MQPROPERTYPARSER">
+         <MessageSet iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <MessageType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <MessageFormat iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <Encoding iib:valueType="INTEGER">546</Encoding>
+         <CodedCharSetId iib:valueType="INTEGER">1208</CodedCharSetId>
+         <Transactional iib:valueType="BOOLEAN">FALSE</Transactional>
+         <Persistence iib:valueType="BOOLEAN">FALSE</Persistence>
+         <CreationTime iib:valueType="GMTTIMESTAMP">2023-05-26 17:23:27.471001</CreationTime>
+         <ExpirationTime iib:valueType="INTEGER">-1</ExpirationTime>
+         <Priority iib:valueType="INTEGER">0</Priority>
+         <ReplyIdentifier iib:valueType="BLOB">000000000000000000000000000000000000000000000000</ReplyIdentifier>
+         <ReplyProtocol iib:valueType="CHARACTER">SOAP-HTTP</ReplyProtocol>
+         <Topic iib:elementType="0x03000000"/>
+         <ContentType iib:valueType="CHARACTER">application/x-www-form-urlencoded</ContentType>
+         <IdentitySourceType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourceToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourcePassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentitySourceIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedPassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+         <IdentityMappedIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+      </Properties>
+      <HTTPInputHeader iib:parser="WSINPHDR">
+         <Host iib:valueType="CHARACTER">localhost:7800</Host>
+         <User-Agent iib:valueType="CHARACTER">curl/7.83.0</User-Agent>
+         <Accept iib:valueType="CHARACTER">*/*</Accept>
+         <Content-Length iib:valueType="CHARACTER">1405</Content-Length>
+         <Content-Type iib:valueType="CHARACTER">application/x-www-form-urlencoded</Content-Type>
+         <X-Original-HTTP-Command iib:valueType="CHARACTER">POST http://localhost:7800/Transformation_ESQL HTTP/1.1</X-Original-HTTP-Command>
+         <X-Server-Name iib:valueType="CHARACTER">localhost</X-Server-Name>
+         <X-Server-Port iib:valueType="CHARACTER">7800</X-Server-Port>
+         <X-Remote-Addr iib:valueType="CHARACTER">127.0.0.1</X-Remote-Addr>
+         <X-Remote-Host iib:valueType="CHARACTER">localhost</X-Remote-Host>
+         <X-Scheme iib:valueType="CHARACTER">http</X-Scheme>
+      </HTTPInputHeader>
+      <XMLNSC iib:parser="xmlnsc">
+         <SaleEnvelope>
+            <SaleList>
+               <Statement>
+                  <Type iib:elementType="0x03000100" iib:valueType="CHARACTER">Monthly</Type>
+                  <Style iib:elementType="0x03000100" iib:valueType="CHARACTER">Full</Style>
+                  <Customer>
+                     <Initials iib:valueType="CHARACTER">KA</Initials>
+                     <Name iib:valueType="CHARACTER">Braithwaite</Name>
+                     <Balance iib:valueType="CHARACTER">00.50</Balance>
+                  </Customer>
+                  <Purchases>
+                     <Article>
+                        <Desc iib:valueType="CHARACTER">Twister</Desc>
+                        <Cost iib:valueType="DECIMAL">0.480</Cost>
+                        <Qty iib:valueType="CHARACTER">01</Qty>
+                     </Article>
+                     <Article>
+                        <Desc iib:valueType="CHARACTER">The Times Newspaper</Desc>
+                        <Cost iib:valueType="DECIMAL">0.320</Cost>
+                        <Qty iib:valueType="CHARACTER">01</Qty>
+                     </Article>
+                  </Purchases>
+                  <Amount iib:value="0.320" iib:valueType="DECIMAL">
+                     <Currency iib:elementType="0x03000100" iib:valueType="CHARACTER">Sterling</Currency>
+                  </Amount>
+               </Statement>
+               <Statement>
+                  <Type iib:elementType="0x03000100" iib:valueType="CHARACTER">Monthly</Type>
+                  <Style iib:elementType="0x03000100" iib:valueType="CHARACTER">Full</Style>
+                  <Customer>
+                     <Initials iib:valueType="CHARACTER">TJ</Initials>
+                     <Name iib:valueType="CHARACTER">Dunnwin</Name>
+                     <Balance iib:valueType="CHARACTER">81.84</Balance>
+                  </Customer>
+                  <Purchases>
+                     <Article>
+                        <Desc iib:valueType="CHARACTER">The Origin of Species</Desc>
+                        <Cost iib:valueType="DECIMAL">35.744</Cost>
+                        <Qty iib:valueType="CHARACTER">02</Qty>
+                     </Article>
+                     <Article>
+                        <Desc iib:valueType="CHARACTER">Microscope</Desc>
+                        <Cost iib:valueType="DECIMAL">57.920</Cost>
+                        <Qty iib:valueType="CHARACTER">01</Qty>
+                     </Article>
+                  </Purchases>
+                  <Amount iib:value="57.920" iib:valueType="DECIMAL">
+                     <Currency iib:elementType="0x03000100" iib:valueType="CHARACTER">Euros</Currency>
+                  </Amount>
+               </Statement>
+            </SaleList>
+         </SaleEnvelope>
+      </XMLNSC>
+   </message>
+</MessageAssembly>
