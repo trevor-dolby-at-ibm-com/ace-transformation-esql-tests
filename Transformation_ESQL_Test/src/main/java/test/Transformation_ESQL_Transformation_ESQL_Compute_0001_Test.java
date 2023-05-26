@@ -134,6 +134,6 @@ public class Transformation_ESQL_Transformation_ESQL_Compute_0001_Test {
 		TestMessageAssembly actualMessageAssembly = null;
 		// Get the TestMessageAssembly object for the actual propagated message
 		actualMessageAssembly = nodeSpy.propagatedMessageAssembly("out", 1);
-		assertEquals("400", actualMessageAssembly.localEnvironmentPath("Destination.HTTP.ReplyStatusCode").getStringValue());
+		assertEquals("400", actualMessageAssembly.localEnvironmentPath("Destination.HTTP.ReplyStatusCode").getValueAsString());
 	}
 }
