@@ -6,7 +6,7 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Transformation_ESQL/icons/full/obj16/Transformation_ESQL.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Transformation_ESQL/icons/full/obj30/Transformation_ESQL.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="209,20" computeExpression="esql://routine/#Transformation_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="209,20" computeExpression="esql://routine/#Transformation_Compute.Main" computeMode="destinationAndMessage">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
       <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="19,23" URLSpecifier="/Transformation_ESQL" messageDomainProperty="XMLNSC">

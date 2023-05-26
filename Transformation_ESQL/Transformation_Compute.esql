@@ -12,6 +12,12 @@ CREATE COMPUTE MODULE Transformation_Compute
 		DECLARE amount REFERENCE TO OutputRoot.XMLNSC.SaleEnvelope.SaleList;
 		DECLARE total DECIMAL 0;
 		
+		IF NOT LASTMOVE(invoice) THEN
+			-- No input elements
+			SET OutputLocalEnvironment.Destination.HTTP.ReplyStatusCode = 400;
+			SET OutputRoot.XMLNSC.error = 'no invoice elements provided';
+		END IF;
+		
 		-- while invoice has next element
 		WHILE LASTMOVE(invoice) DO
 			-- create the new message
